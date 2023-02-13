@@ -85,6 +85,21 @@ The user stories below are in order of planned implementation.
 
 ## API Endpoints
 
+### Profiles
+
+GET `../profiles`
+
+- id = resource identifier (integer)
+- owner = user connection (one to one field connected to django User)
+- created_at = profile creation date (date time field)
+- name = optional name of user (Char field max 250 characters)
+- content = optional description of user (Text field)
+- profile_image = optional image for user (Image field)
+- balance = money held by user (integer)
+- gym_category = the next gym to be defeated (integer)
+- tutorial_level = how much tutorial is completed (integer)
+- trainer_type = the type of trainer the user is (Text field, defaults as "Trainer")
+
 *To be completed*
 
 --- 
@@ -125,6 +140,10 @@ The user stories below are in order of planned implementation.
 ---
 
 ## Testing
+
+### Profiles
+
+I have tested the get method by opening the link to `../profiles/`, making sure it returns a JSON response for each profile
 
 *To be completed*
 
