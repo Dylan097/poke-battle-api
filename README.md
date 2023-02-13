@@ -146,6 +146,7 @@ GET/PUT `../profiles/<id>`
 - I have tested the GET method by opening the link to `../profiles/`, making sure it returns a JSON response for each profile
 - I have tested the GET method for Profile details by testing the links to valid and invalid profile id's. I've also made sure the response returned remains in JSON format
 - I have tested the PUT method by updating the name and content for a user, making sure the JSON response relevant to what I've updated, changes too
+- I have tested the PUT and GET method to make sure that only the user that owns a profile can update that profile, and to make sure that all users can still view that profile if they're not the owner, but not have the ability to update it 
 
 *To be completed*
 
