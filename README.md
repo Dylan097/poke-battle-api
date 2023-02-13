@@ -87,7 +87,7 @@ The user stories below are in order of planned implementation.
 
 ### Profiles
 
-GET `../profiles`
+GET/PUT `../profiles/<id>`
 
 - id = resource identifier (integer)
 - owner = user connection (one to one field connected to django User)
@@ -143,7 +143,9 @@ GET `../profiles`
 
 ### Profiles
 
-I have tested the get method by opening the link to `../profiles/`, making sure it returns a JSON response for each profile
+- I have tested the GET method by opening the link to `../profiles/`, making sure it returns a JSON response for each profile
+- I have tested the GET method for Profile details by testing the links to valid and invalid profile id's. I've also made sure the response returned remains in JSON format
+- I have tested the PUT method by updating the name and content for a user, making sure the JSON response relevant to what I've updated, changes too
 
 *To be completed*
 
