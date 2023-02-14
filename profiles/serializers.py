@@ -4,6 +4,11 @@ from .models import Profile
 
 class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
+    tutorial_level = serializers.ReadOnlyField()
+    trainer_type = serializers.ReadOnlyField()
+    elite_level = serializers.ReadOnlyField()
+    balance = serializers.ReadOnlyField()
+    gym_category = serializers.ReadOnlyField()
     is_owner = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
