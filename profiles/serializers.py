@@ -15,5 +15,5 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'name', 'content',
             'profile_image', 'balance', 'gym_category',
-            'tutorial_level', 'trainer_type', 'is_owner'
+            'tutorial_level', 'trainer_type', 'is_owner', 'elite_level'
         ]

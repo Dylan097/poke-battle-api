@@ -16,6 +16,7 @@ class Profile(models.Model):
     gym_category = models.IntegerField(default=1)
     tutorial_level = models.IntegerField(default=1)
     trainer_type = models.TextField(default='Trainer')
+    elite_level = models.IntegerField(default=1)
 
     class Meta:
         ordering = ['-created_at']
@@ -27,5 +28,6 @@ class Profile(models.Model):
 def create_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(owner=instance)
+
 
 post_save.connect(create_profile, sender=User)
